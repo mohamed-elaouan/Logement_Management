@@ -1,0 +1,83 @@
+<form class="container" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <h3 class="row">@if(this.param){Update Logement}@else{Ajoutée Nouvel Logement} </h3>
+  <div class="row ">
+    <!-- Nom -->
+    <mdb-form-control style="width: fit-content !important;">
+      <input mdbInput formControlName="name" type="text" id="typeText" class="form-control" />
+      <label mdbLabel class="form-label" for="typeText">Name</label>
+      <mdb-error *ngIf="
+        this.myForm.get('name')?.hasError('required')  && (this.myForm.get('name')?.dirty || this.myForm.get('name')?.touched)
+            ">Name is required</mdb-error>
+      <mdb-success *ngIf="
+        this.myForm.get('name')?.valid
+            ">Looks good!</mdb-success>
+    </mdb-form-control>
+    <!-- City -->
+    <mdb-form-control
+      style="width: fit-content !important;"><!-- Si tu voie erreur , c'est juste parce que label-id n'est pas egale id de input -->
+      <input mdbInput type="text" formControlName="city" id="city" class="form-control" />
+      <label mdbLabel class="form-label" for="city">Ville</label>
+      <mdb-error *ngIf="
+        this.myForm.get('city')?.hasError('required')  && (this.myForm.get('city')?.dirty || this.myForm.get('city')?.touched)
+            ">Ville is required</mdb-error>
+      <mdb-success *ngIf="
+        this.myForm.get('city')?.valid
+            ">Looks good!</mdb-success>
+    </mdb-form-control>
+  </div>
+  <div class="row">
+    <!-- state -->
+    <mdb-form-control style="width: fit-content !important;">
+      <input mdbInput type="text" formControlName="state" id="typeTehqdtxt" class="form-control" />
+      <label mdbLabel class="form-label" for="typeTehqdtxt">State</label>
+      <mdb-error *ngIf="
+        this.myForm.get('state')?.hasError('required')  && (this.myForm.get('state')?.dirty || this.myForm.get('state')?.touched)
+            ">State is required</mdb-error>
+      <mdb-success *ngIf="
+        this.myForm.get('state')?.valid
+            ">Looks good!</mdb-success>
+    </mdb-form-control>
+    <!-- photo -->
+    <mdb-form-control class="form-outline" style="width: fit-content !important;">
+      <input mdbInput type="url" id="typeURL" formControlName="photo" class="form-control" />
+      <label mdbLabel class="form-label" for="typeURL">URL Picture</label>
+      <mdb-error *ngIf="
+        this.myForm.get('photo')?.hasError('required')  && (this.myForm.get('photo')?.dirty || this.myForm.get('photo')?.touched)
+            ">Picture_URL is required</mdb-error>
+      <mdb-error *ngIf="
+         this.myForm.get('photo')?.hasError('pattern')  && (this.myForm.get('photo')?.dirty || this.myForm.get('photo')?.touched)
+            ">Picture_URL is Invalid</mdb-error>
+      <mdb-success *ngIf="
+        this.myForm.get('photo')?.valid
+            ">Looks good!</mdb-success>
+    </mdb-form-control>
+  </div>
+  <div class="row" style="align-items: center">
+    <!-- Nombre availableUnits -->
+    <mdb-form-control class="form-outline" style="width: fit-content !important;">
+      <input mdbInput type="number" formControlName="availableUnits" id="nb" class="form-control" />
+      <label mdbLabel class="form-label" for="nb">Nombre availableUnits</label>
+      <mdb-error *ngIf="
+        this.myForm.get('availableUnits')?.hasError('required')  && (this.myForm.get('availableUnits')?.dirty || this.myForm.get('availableUnits')?.touched)
+            ">Nombre_availableUnits is required</mdb-error>
+      <mdb-success *ngIf="
+        this.myForm.get('availableUnits')?.valid
+            ">Looks good!</mdb-success>
+    </mdb-form-control>
+    <div class="" style="display: flex;gap: 20px;width: 45% !important;">
+      <!-- wifi -->
+      <div class="form-check form-switch">
+        <input mdbCheckbox class="form-check-input" formControlName="wifi" type="checkbox" id="wifiSwich" />
+        <label class="form-check-label" for="wifiSwich">Wifi</label>
+      </div>
+      <!-- landary -->
+      <div class="form-check form-switch">
+        <input mdbCheckbox class="form-check-input" type="checkbox" formControlName="landery" id="landerySwitch" />
+        <label class="form-check-label" for="landerySwitch">Landery</label>
+      </div>
+    </div>
+
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="myForm.invalid"
+    mdbRipple>@if(this.param){Update}@else{Ajoutée}</button>
+</form>

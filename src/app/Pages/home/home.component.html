@@ -1,5 +1,8 @@
 <h4 class="container">List des Logements :</h4>
 <br>
+<div style="text-align: end;width: 100%;" class="container"><button type="button"  routerLink="/AddNew"
+    class="btn btn-secondary " mdbRipple>Ajoutée Nouveau</button></div><br>
+
 <div style="display: flex;flex-direction: row;flex-wrap: wrap;gap:20px;margin: auto;justify-content: center;">
   <div class="card" *ngFor="let log of logements" MyBorderCard="green" (click)="openModal(log.id)"
     style="width: 300px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">

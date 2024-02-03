@@ -1,34 +1,24 @@
 {
   "locations": [
     {
-      "id": "0",
       "name": "Acme Fresh Start Housing",
       "city": "Chicago",
       "state": "IL",
       "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-      "availableUnits": 4,
-      "wifi": true,
-      "laundry": true
+      "availableUnits": "4",
+      "wifi": false,
+      "landery": false,
+      "id": "1"
     },
     {
-      "id": "5",
-      "name": "Hopeful Apartment Group",
-      "city": "Oakland",
-      "state": "CA",
-      "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
-      "availableUnits": 2,
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "8",
       "name": "Seriously Safe Towns",
       "city": "Oakland",
       "state": "CA",
-      "photo": "https://angular.io/assets/images/tutorials/faa/saru-robert-9rP3mxf8qWI-unsplash.jpg",
-      "availableUnits": 10,
+      "photo": "https://firebasestorage.googleapis.com/v0/b/stagiaire-maroc.appspot.com/o/images%2FProfileAbout.jpg?alt=media&token=4f509c8a-d381-48de-a6f9-b07d41479cd4",
+      "availableUnits": "10",
       "wifi": false,
-      "laundry": false
+      "landery": false,
+      "id": "8"
     },
     {
       "id": "9",
@@ -39,6 +29,26 @@
       "availableUnits": 6,
       "wifi": true,
       "laundry": true
+    },
+    {
+      "id": "cdd6",
+      "name": "Seriously Safe Towns",
+      "city": "Oakland",
+      "state": "CA",
+      "photo": "https://angular.io/assets/images/tutorials/faa/saru-robert-9rP3mxf8qWI-unsplash.jpg",
+      "availableUnits": "10",
+      "wifi": false,
+      "landery": false
+    },
+    {
+      "id": "b07d",
+      "name": "Courniche",
+      "city": "Casablanca",
+      "state": "Aiin Diabe",
+      "photo": "https://firebasestorage.googleapis.com/v0/b/stagiaire-maroc.appspot.com/o/images%2FScreenshot%202023-05-02%20165814.png?alt=media&token=ca0ac161-d5f8-4440-8fb7-3ba0428f675e",
+      "availableUnits": 9,
+      "wifi": true,
+      "landery": true
     }
   ]
 }
